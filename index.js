@@ -24,9 +24,16 @@ import { fileURLToPath } from "url";
 import path from "path";
 
 async function main() {
+  const downloaded1 = await downloadHistoricalData("BTCEUR", {
+    interval: "1h",
+    startDate: "2024-01-01",
+    endDate: "2024-10-15",
+  });
+  console.log(downloaded1);
+
   const downloaded = await downloadHistoricalData("BTCEUR", {
     interval: "8h",
-    startDate: "2023-01-01",
+    startDate: "2024-01-01",
     endDate: "2024-10-15",
   });
   console.log(downloaded);
