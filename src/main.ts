@@ -18,6 +18,7 @@ import {
   findStrategies,
   runStrategy,
   scanStrategies,
+  debug,
 } from "@backtestjs/core";
 
 import { StrategyResult, StrategyResultMulti } from "@backtestjs/core";
@@ -81,6 +82,7 @@ async function main() {
     startingAmount: 1000,
     startTime: new Date("2024-01-14").getTime(),
     endTime: new Date("2024-10-14").getTime(),
+    rootPath: strategyPath,
   });
   console.log(runStrategyResult);
 
