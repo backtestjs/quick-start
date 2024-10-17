@@ -9,8 +9,6 @@
     "prestart": "npm run build",
     "start": "node dist/main.js",
     "predemo-js": "npm run build",
-    "demo-js": "node dist/demo.js",
-    "demo": "npx ts-node src/demo.ts",
     "dev": "npx ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
