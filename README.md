@@ -5,3 +5,19 @@
 # Backtest JS: Test Project
 
 Enhance your trading strategies with BacktestJS, the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+
+## Instructions
+
+`npm install`
+
+`npm link @backtestjs/core`
+
+`npm install --include=dev prisma`
+
+`npm install @backtestjs/core`
+
+`npx prisma validate`
+
+`npx prisma generate`
+
+`npx prisma db push`

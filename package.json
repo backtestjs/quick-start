@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "start": "node index.js",
+    "dev": "node --env-file=.env index.js",
+    "start": "node --env-file=.env index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prisma": {
+    "schema": "./node_modules/@backtestjs/core/prisma/schema.prisma"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "dayjs": "^1.11.13",
-    "technicalindicators": "^3.1.0",
-    "@backtestjs/core": "^1.0.0"
+    "technicalindicators": "^3.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.21.0"
   }
 }
