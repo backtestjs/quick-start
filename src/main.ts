@@ -20,8 +20,9 @@ import {
   scanStrategies,
 } from "@backtestjs/core";
 
-import { fileURLToPath } from "url";
-import path from "path";
+import { StrategyResult, StrategyResultMulti } from "@backtestjs/core";
+
+const path = require("path");
 
 async function main() {
   const downloaded1 = await downloadHistoricalData("BTCEUR", {
@@ -38,7 +39,7 @@ async function main() {
   });
   console.log(downloaded);
 
-  const exported = await exportFileCSV("BTCEUR-8h", "./csv");
+  const exported = await exportFileCSV("BTCEUR-8h");
   console.log(exported);
 
   const deleted = await deleteHistoricalData("BTCEUR-8h");
@@ -53,15 +54,13 @@ async function main() {
   const dataSet = await findHistoricalData("BTCEUR-8h");
   console.log(dataSet);
 
-  const importFilePathCSV = path.resolve("./csv/BTCEUR-8h.csv");
-  const imported = await importFileCSV("BTC", "EUR", "8h", importFilePathCSV);
+  const imported = await importFileCSV("BTC", "EUR", "8h", "./csv/BTCEUR-8h.csv");
   console.log(imported);
 
   const dataSet2 = await findHistoricalData("BTCEUR-8h");
   console.log(dataSet2);
 
-  const strategiesFolder = path.resolve("./strategies");
-  const scan = await scanStrategies(strategiesFolder);
+  const scan = await scanStrategies("./src/strategies");
   console.log(scan);
 
   const strategies = await findStrategies();
@@ -80,7 +79,7 @@ async function main() {
   });
   console.log(runStrategyResult);
 
-  const saved = await saveResults("demo-results", runStrategyResult, true);
+  const saved = await saveResults("demo-results", runStrategyResult as StrategyResult, true);
   console.log(saved);
 
   const resultsNames = await findResultNames();
@@ -93,7 +92,6 @@ async function main() {
   console.log(deletedResults);
 
   let isJS = false;
-  const __filename = fileURLToPath(import.meta.url);
   const extension = path.extname(__filename);
   if (extension === ".js") isJS = true;
   const strategyPath = isJS ? `./dist/strategies` : `./src/strategies`;
@@ -111,7 +109,7 @@ async function main() {
   });
   console.log(runMultiStrategyResult);
 
-  const savedMulti = await saveMultiResults("demo-multi-results", runMultiStrategyResult);
+  const savedMulti = await saveMultiResults("demo-multi-results", runMultiStrategyResult as StrategyResultMulti);
   console.log(savedMulti);
 
   const multiResultsNames = await findMultiResultNames();

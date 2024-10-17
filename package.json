@@ -1,25 +1,35 @@
 {
   "name": "test-project",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "description": "",
+  "main": "dist/main.js",
   "scripts": {
-    "dev": "node --env-file=.env index.js",
-    "start": "node --env-file=.env index.js",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node dist/main.js",
+    "predemo-js": "npm run build",
+    "demo-js": "node dist/demo.js",
+    "demo": "npx ts-node src/demo.ts",
+    "dev": "npx ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
     "schema": "./node_modules/@backtestjs/core/prisma/schema.prisma"
   },
+  "files": [
+    "dist"
+  ],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "Apache-2.0",
   "dependencies": {
     "dayjs": "^1.11.13",
     "technicalindicators": "^3.1.0"
   },
   "devDependencies": {
-    "prisma": "^5.21.0"
+    "@types/node": "^20.4.2",
+    "prisma": "^5.21.0",
+    "typescript": "^4.5.4"
   },
   "engines": {
     "node": ">=22.0.0"
