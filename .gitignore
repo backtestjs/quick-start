@@ -20,4 +20,3 @@ candles.json
 
 /**/strategies/test*.ts
 .env
-/db
