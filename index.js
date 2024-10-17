@@ -31,6 +31,9 @@ async function main() {
   });
   console.log(downloaded);
 
+  const exported = await exportFileCSV("BTCEUR-8h", "./csv");
+  console.log(exported);
+
   const deleted = await deleteHistoricalData("BTCEUR-8h");
   console.log(deleted);
 
@@ -43,16 +46,15 @@ async function main() {
   const dataSet = await findHistoricalData("BTCEUR-8h");
   console.log(dataSet);
 
-  const exported = await exportFileCSV("BTCEUR-8h");
-  console.log(exported);
-
-  const imported = await importFileCSV("BTC", "EUR", "8h", "./csv/BTCEUR-8h.csv");
+  const importFilePathCSV = path.resolve("./csv/BTCEUR-8h.csv");
+  const imported = await importFileCSV("BTC", "EUR", "8h", importFilePathCSV);
   console.log(imported);
 
   const dataSet2 = await findHistoricalData("BTCEUR-8h");
   console.log(dataSet2);
 
-  const scan = await scanStrategies();
+  const strategiesFolder = path.resolve("./strategies");
+  const scan = await scanStrategies(strategiesFolder);
   console.log(scan);
 
   const strategies = await findStrategies();
