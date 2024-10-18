@@ -2,14 +2,21 @@
   "name": "test-project",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
+  "main": "dist/main",
+  "typings": "dist/main",
+  "keywords": [
+    "backtestjs",
+    "backtest",
+    "test",
+    "example"
+  ],
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node --env-file=.env dist/main.js",
     "predemo-js": "npm run build",
-    "dev": "npx ts-node src/main.ts",
+    "dev": "npx ts-node main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
@@ -27,6 +34,7 @@
   "devDependencies": {
     "@types/node": "^20.4.2",
     "prisma": "^5.21.0",
+    "ts-node": "^10.9.2",
     "typescript": "^4.5.4"
   },
   "engines": {
