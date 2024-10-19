@@ -14,9 +14,9 @@
     "prebuild": "rm -rf ./dist",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node --env-file=.env dist/main.js",
+    "start": "cd dist && node --env-file=../.env main.js",
     "predemo-js": "npm run build",
-    "dev": "npx ts-node main.ts",
+    "dev": "node -r ts-node/register --env-file=.env main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {

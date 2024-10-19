@@ -28,6 +28,6 @@
       "@types": ["./types"]
     }
   },
-  "include": ["*.ts", "*.d.ts", "*.json", "src/**/*", "src/**/*.json", "types/**/*"],
+  "include": ["*.ts", "*.d.ts", "*.json", "src/**/*.ts", "strategies/**/*.ts", "src/**/*.json", "types/**/*"],
   "exclude": ["node_modules", "test/**/*"]
 }

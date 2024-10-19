@@ -23,9 +23,9 @@ import {
 
 import { StrategyResult, StrategyResultMulti } from "@backtestjs/core";
 
-const path = require("path");
-
 async function main() {
+  debug();
+
   const downloaded1 = await downloadHistoricalData("BTCEUR", {
     interval: "1h",
     startDate: "2024-01-01",
@@ -61,12 +61,7 @@ async function main() {
   const dataSet2 = await findHistoricalData("BTCEUR-8h");
   console.log(dataSet2);
 
-  let isJS = false;
-  const extension = path.extname(__filename);
-  if (extension === ".js") isJS = true;
-  const strategyPath = isJS ? `./dist/src/strategies` : `./src/strategies`;
-
-  const scan = await scanStrategies(strategyPath);
+  const scan = await scanStrategies();
   console.log(scan);
 
   const strategies = await findStrategies();
@@ -82,7 +77,6 @@ async function main() {
     startingAmount: 1000,
     startTime: new Date("2024-01-14").getTime(),
     endTime: new Date("2024-10-14").getTime(),
-    rootPath: strategyPath,
   });
   console.log(runStrategyResult);
 
@@ -107,7 +101,7 @@ async function main() {
     endTime: new Date("2023-10-14").getTime(),
     percentFee: 0,
     percentSlippage: 0,
-    rootPath: strategyPath,
+    rootPath: "./strategies",
   });
   console.log(runMultiStrategyResult);
 
