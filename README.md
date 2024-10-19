@@ -8,16 +8,35 @@ Enhance your trading strategies with BacktestJS, the leading CLI tool crafted fo
 
 ## Instructions
 
-`npm install`
+Clone this repo and start writing your strategies immediately.
 
-`npm link @backtestjs/core`
+```bash
+  git clone git@github.com:backtestjs/test-project.git backtestjs-test-project
+  cd backtestjs-test-project
+  npm install
+```
 
-`npm install --include=dev prisma`
+## Run this project
 
-`npm install @backtestjs/core`
+Start strategic backtesting with a single command:
 
-`npx prisma validate`
+```bash
+  npm run dev # main.ts
+  npm run start # dist/main.js
+```
 
-`npx prisma generate`
+## Useful commands
 
-`npx prisma db push`
+`npm install` install all dependencies
+
+`npm link @backtestjs/core` link the local version of the core package (useful for development)
+
+`npm install --include=dev prisma` install prisma cli (useful for manage SQLite database)
+
+`npm install @backtestjs/core` install the latest version of the core package (useful for production)
+
+`npx prisma validate` validate your Prisma schema
+
+`npx prisma generate` generate Prisma Client (required if you change your Prisma schema or your database url)
+
+`npx prisma db push` push your Prisma schema to your database
