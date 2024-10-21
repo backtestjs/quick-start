@@ -21,8 +21,6 @@ import {
   debug,
 } from "@backtestjs/core";
 
-import { StrategyResult, StrategyResultMulti } from "@backtestjs/core";
-
 async function main() {
   debug();
 
@@ -39,7 +37,7 @@ async function main() {
   const scan = await scanStrategies();
   console.log(scan);
 
-  const runStrategyResult = await runStrategy({
+  const strategyResult = await runStrategy({
     strategyName: "demo",
     historicalMetaData: ["BTCEUR-8h"],
     params: {},
@@ -47,7 +45,9 @@ async function main() {
     startTime: new Date("2024-01-14").getTime(),
     endTime: new Date("2024-10-14").getTime(),
   });
-  console.log(runStrategyResult.runMetaData);
+  console.log(strategyResult.runMetaData);
+  console.log(strategyResult.allOrders?.length);
+  console.log(strategyResult.allWorths?.length);
 }
 
 main();
