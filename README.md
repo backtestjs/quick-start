@@ -54,13 +54,24 @@ This section will provide an overview of the project's structure. Understanding 
 
 The project is organized as follows:
 
-- `.env`: This file contains environment variables. The `DATABASE_URL` variable should be inserted with the path to the target file. By default, SQLite is used, so it's not necessary to have an external database. For example, an absolute path like `DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db` is valid.
+- `.env`: This file contains environment variables. Please, refer to below section about the `.env` file.
 
 - `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use BacktestJS. Please, refer to [BacktestJS documentation](https://backtestjs.github.io/core/) for more information.
 
 - `strategies`: This directory contains the source code for the strategies. Each strategy is a separate file that implements the logic for a specific trading strategy.
 
 - `db`: This directory is used to store the SQLite database file. Remember to change .env `DATABASE_URL` variable to point to this file. Use absolute path.
+
+## File .env
+
+The `.env` file is used to store environment variables. This file is not committed to the repository, so you can use it to store sensitive information.
+
+The `DATABASE_URL` variable **must be** inserted with the path to the target file. By default, SQLite is used, so it's not necessary to have an external database. For example, an absolute path like `DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db` is valid.
+
+```env
+DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db
+FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
+```
 
 ## Some useful commands
 
