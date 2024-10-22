@@ -2,19 +2,30 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/backtestjs/backtestjs)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%backtestjs%2Fbacktestjs%2Fhit-counter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
-# Backtest JS: Test Project
+# Backtest JS: Quick Start
 
-Enhance your trading strategies with BacktestJS, the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+Enhance your trading strategies with (BacktestJS)[https://github.com/backtestjs/core], the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+
+## Why this
+
+This repository has been created to provide a starting point for those who want to start using BacktestJS. This will allow you to explore the capabilities of BacktestJS and start developing your trading strategies quickly.
 
 ## Instructions
 
-Clone this repo and start writing your strategies immediately.
+Clone this repo and start writing your strategies immediately:
 
 ```bash
-  git clone git@github.com:backtestjs/test-project.git backtestjs-test-project
-  cd backtestjs-test-project
+  git clone git@github.com:backtestjs/quick-start.git backtestjs-test
+  cd backtestjs-test
   npm install
 ```
+
+If you want to use this repository as a base for your project and not just as a basis for evaluating BacktestJS, we recommend removing the "remote" so that you can work with git locally and if necessary, replace it with your own repository.
+
+So, you can use the following commands:
+
+- To remove the current repository and be independent `git remote remove origin`
+- To add a new (your) repository `git remote add origin <your-git-url>`
 
 ## Run this project
 
@@ -25,7 +36,21 @@ Start strategic backtesting with a single command:
   npm run start # dist/main.js
 ```
 
-## Useful commands
+## Project Structure
+
+This section will provide an overview of the project's structure. Understanding the layout of the project will help you navigate and contribute to the project more effectively.
+
+The project is organized as follows:
+
+- `.env`: This file contains environment variables. The `DATABASE_URL` variable should be inserted with the path to the target file. By default, SQLite is used, so it's not necessary to have an external database. For example, an absolute path like `DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db` is valid.
+
+- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use BacktestJS. Please, refer to [BacktestJS documentation](https://backtestjs.github.io/core/) for more information.
+
+- `strategies`: This directory contains the source code for the strategies. Each strategy is a separate file that implements the logic for a specific trading strategy.
+
+- `db`: This directory is used to store the SQLite database file. Remember to change .env `DATABASE_URL` variable to point to this file. Use absolute path.
+
+## Some useful commands
 
 `npm install` install all dependencies
 
