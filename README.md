@@ -20,12 +20,14 @@ Clone this repo and start writing your strategies immediately:
   npm install
 ```
 
-If you want to use this repository as a base for your project and not just as a basis for evaluating BacktestJS, we recommend removing the "remote" so that you can work with git locally and if necessary, replace it with your own repository.
+If you intend to use this repository as a starting point for your project rather than just to explore BacktestJS, it's recommended to disconnect from the current repository to work independently with git. If needed, you can replace it with your own repository.
 
-So, you can use the following commands:
+Follow these steps to achieve this:
 
-- To remove the current repository and be independent `git remote remove origin`
-- To add a new (your) repository `git remote add origin <your-git-url>`
+1. Remove the current repository to work independently: `git remote remove origin`
+2. Attach to your new repository: `git remote add origin <your-git-url>`
+
+This will allow you to manage your project's version control locally and replace it with your own repository if necessary.
 
 ## Initial Setup
 
