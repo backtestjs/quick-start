@@ -32,10 +32,6 @@ async function main() {
     endTime: new Date('2024-10-14').getTime()
   })
 
-  console.log(strategyResult.runMetaData)
-  console.log(strategyResult.allOrders?.length)
-  console.log(strategyResult.allWorths?.length)
-
   const parsed = await parseRunResultsStats(strategyResult)
   console.log(parsed)
 }
