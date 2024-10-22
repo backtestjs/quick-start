@@ -1,4 +1,11 @@
-import { findHistoricalDataNames, downloadHistoricalData, runStrategy, scanStrategies, debug } from "@backtestjs/core";
+import {
+  parseRunResultsStats,
+  findHistoricalDataNames,
+  downloadHistoricalData,
+  runStrategy,
+  scanStrategies,
+  debug,
+} from "@backtestjs/core";
 
 async function main() {
   debug();
@@ -24,9 +31,13 @@ async function main() {
     startTime: new Date("2024-01-14").getTime(),
     endTime: new Date("2024-10-14").getTime(),
   });
+
   console.log(strategyResult.runMetaData);
   console.log(strategyResult.allOrders?.length);
   console.log(strategyResult.allWorths?.length);
+
+  const parsed = await parseRunResultsStats(strategyResult);
+  console.log(parsed);
 }
 
 main();
