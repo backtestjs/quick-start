@@ -26,7 +26,10 @@ async function main() {
   const strategyResult = await runStrategy({
     strategyName: 'demo',
     historicalMetaData: ['BTCEUR-8h'],
-    params: {},
+    params: {
+      lowSMA: 10,
+      highSMA: 50
+    },
     startingAmount: 1000,
     startTime: new Date('2024-01-14').getTime(),
     endTime: new Date('2024-10-14').getTime()
