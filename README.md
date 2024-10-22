@@ -27,6 +27,16 @@ So, you can use the following commands:
 - To remove the current repository and be independent `git remote remove origin`
 - To add a new (your) repository `git remote add origin <your-git-url>`
 
+## Initial Setup
+
+When you run the project for the first time, you need to set up the database. Follow these steps:
+
+1. Validate your Prisma schemas: `npx prisma validate`
+2. Generate the Prisma client: `npx prisma generate`
+3. Create the database: `npx prisma db push`
+
+These commands ensure that your project is properly configured and ready to use.
+
 ## Run this project
 
 Start strategic backtesting with a single command:
