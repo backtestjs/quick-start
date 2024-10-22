@@ -38,7 +38,7 @@ Start strategic backtesting with a single command:
 
 ## Project Structure
 
-This section will provide an overview of the project's structure. Understanding the layout of the project will help you navigate and contribute to the project more effectively.
+This section will provide an overview of the project's structure. Understanding the layout of the project will help you navigate and use this project more effectively.
 
 The project is organized as follows:
 
