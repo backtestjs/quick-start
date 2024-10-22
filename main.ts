@@ -4,11 +4,11 @@ import {
   downloadHistoricalData,
   runStrategy,
   scanStrategies,
-  debug
+  printInfo
 } from '@backtestjs/core'
 
 async function main() {
-  debug()
+  printInfo()
 
   const downloaded = await downloadHistoricalData('BTCEUR', {
     interval: '8h',
