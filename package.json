@@ -1,14 +1,14 @@
 {
-  "name": "test-project",
+  "name": "quick-start",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main",
   "typings": "dist/main",
   "keywords": [
     "backtestjs",
-    "backtest",
-    "test",
-    "example"
+    "boilerplate",
+    "quick-start",
+    "project-template"
   ],
   "scripts": {
     "prebuild": "rm -rf ./dist",
