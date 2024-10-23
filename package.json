@@ -10,11 +10,12 @@
     "project-template"
   ],
   "scripts": {
-    "start": "node -r ts-node/register --env-file=.env src/main.ts",
-    "dev": "node -r ts-node/register --env-file=.env src/main.ts",
+    "align-db": "npx prisma validate && npx prisma generate && npx prisma db push",
+    "start": "node -r ts-node/register --env-file=.env main.ts",
+    "dev": "npm run start",
     "build": "tsc",
     "prejs": "npm run build",
-    "js": "node dist/main.js",
+    "js": "cd dist && node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build",
     "postinstall": "npm run build"
@@ -33,7 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
-    "prisma": "^5.21.0",
+    "prisma": "^5.21.1",
     "ts-node": "^10.9.2",
     "typescript": "^4.5.4"
   },

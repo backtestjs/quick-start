@@ -3,7 +3,7 @@
     "target": "es6" /* Target es6 JavaScript version */,
     "module": "commonjs" /* Use commonjs module system */,
     "outDir": "./dist" /* Output directory for compiled files */,
-    "rootDirs": ["./src"] /* Root directory of your source files */,
+    "rootDirs": ["./src", "./strategies"] /* Root directory of your source files */,
     "esModuleInterop": true /* Allows default imports from modules with no default export */,
     "forceConsistentCasingInFileNames": true /* Avoids issues with case-insensitive filesystems */,
     "strict": true /* Enable all strict type-checking options */,
@@ -23,5 +23,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "strategies/**/*.ts", "main.ts"]
 }

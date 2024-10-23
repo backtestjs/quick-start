@@ -36,7 +36,7 @@ async function main() {
   })
 
   const parsed = await parseRunResultsStats(strategyResult)
-  console.log(parsed)
+  console.log(parsed?.totals[0], parsed?.totals[1]) // just to show somethings (probably, you need to look parsed or strategyResult)
 }
 
 main()
