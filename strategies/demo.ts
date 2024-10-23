@@ -1,4 +1,4 @@
-import { BTH } from '@backtestjs/core'
+import { BTH } from '@backtestjs/framework'
 import * as indicator from 'technicalindicators'
 
 export const properties = {

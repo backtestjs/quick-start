@@ -1,10 +1,10 @@
 ![GitHub](https://img.shields.io/github/license/backtestjs/quick-start)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/backtestjs/quick-start)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbacktestjs%2Fcore&count_bg=%23AE21A7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbacktestjs%2Fframework&count_bg=%23AE21A7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
 # Backtest JS: Quick Start
 
-Enhance your trading strategies with (BacktestJS)[https://github.com/backtestjs/core], the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+Enhance your trading strategies with (BacktestJS)[https://github.com/backtestjs/framework], the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
 
 ## Why this
 
@@ -56,7 +56,7 @@ The project is organized as follows:
 
 - `.env`: This file contains environment variables. Please, refer to below section about the `.env` file.
 
-- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use BacktestJS. Please, refer to [BacktestJS documentation](https://backtestjs.github.io/core/) for more information.
+- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use BacktestJS. Please, refer to [BacktestJS documentation](https://backtestjs.github.io/framework/) for more information.
 
 - `strategies`: This directory contains the source code for the strategies. Each strategy is a separate file that implements the logic for a specific trading strategy.
 
@@ -77,11 +77,11 @@ FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
 
 `npm install` install all dependencies
 
-`npm link @backtestjs/core` link the local version of the core package (useful for development)
+`npm link @backtestjs/framework` link the local version of the framework package (useful for development)
 
 `npm install --include=dev prisma` install prisma cli (useful for manage SQLite database)
 
-`npm install @backtestjs/core` install the latest version of the core package (useful for production)
+`npm install @backtestjs/framework` install the latest version of the framework package (useful for production)
 
 `npx prisma validate` validate your Prisma schema
 

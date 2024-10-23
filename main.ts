@@ -5,7 +5,7 @@ import {
   runStrategy,
   scanStrategies,
   printInfo
-} from '@backtestjs/core'
+} from '@backtestjs/framework'
 
 async function main() {
   printInfo()
