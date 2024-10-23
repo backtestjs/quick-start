@@ -2,8 +2,7 @@
   "name": "@backtestjs/quick-start",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main",
-  "typings": "dist/main",
+  "main": "dist/main.js",
   "keywords": [
     "backtestjs",
     "boilerplate",
@@ -11,13 +10,14 @@
     "project-template"
   ],
   "scripts": {
-    "prebuild": "rm -rf ./dist",
+    "start": "node -r ts-node/register --env-file=.env src/main.ts",
+    "dev": "node -r ts-node/register --env-file=.env src/main.ts",
     "build": "tsc",
-    "prestart": "npm run build",
-    "start": "cd dist && node --env-file=../.env main.js",
-    "predemo-js": "npm run build",
-    "dev": "node -r ts-node/register --env-file=.env main.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prejs": "npm run build",
+    "js": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
   },
   "prisma": {
     "schema": "./node_modules/@backtestjs/framework/prisma/schema.prisma"
