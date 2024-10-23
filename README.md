@@ -26,6 +26,7 @@ Follow these steps to achieve this:
 
 1. Remove the current repository to work independently: `git remote remove origin`
 2. Attach to your new repository: `git remote add origin <your-git-url>`
+3. Verify that the remote has changed: `git remote -v`
 
 This will allow you to manage your project's version control locally and replace it with your own repository if necessary.
 
