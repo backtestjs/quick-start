@@ -40,6 +40,12 @@ When you run the project for the first time, you need to set up the database. Fo
 
 These commands ensure that your project is properly configured and ready to use.
 
+**_Note_**: If you are not familiar with **Prisma** and the commands above, you can use `npm run align-db` to align the schema with the database.
+
+```bash
+npm run align-db
+```
+
 ## Run this project
 
 Start strategic backtesting with a single command:
