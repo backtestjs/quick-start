@@ -11,11 +11,10 @@
   ],
   "scripts": {
     "align-db": "npx prisma validate && npx prisma generate && npx prisma db push",
-    "start": "node -r ts-node/register --env-file=.env main.ts",
-    "dev": "npm run start",
     "build": "tsc",
-    "prejs": "npm run build",
-    "js": "cd dist && node main.js",
+    "prestart": "npm run build",
+    "start": "cd dist && node main.js",
+    "dev": "node -r ts-node/register --env-file=.env main.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build",
     "postinstall": "npm run build"
