@@ -1,6 +1,8 @@
 import {
   parseRunResultsStats,
+  findHistoricalData,
   findHistoricalDataNames,
+  deleteHistoricalData,
   downloadHistoricalData,
   runStrategy,
   scanStrategies,
@@ -9,6 +11,14 @@ import {
 
 async function main() {
   printInfo()
+
+  const found = await findHistoricalData('BTCEUR-8h')
+  console.log(found)
+
+  if (found) {
+    const deleted = await deleteHistoricalData('BTCEUR-8h')
+    console.log(deleted)
+  }
 
   const downloaded = await downloadHistoricalData('BTCEUR', {
     interval: '8h',
