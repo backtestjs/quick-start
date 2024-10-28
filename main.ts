@@ -12,26 +12,34 @@ import {
 async function main() {
   printInfo()
 
+  // historical data
+  const startDate = new Date('2024-01-01').getTime()
+  const endDate = new Date('2024-10-15').getTime()
+
+  // analyzed period
+  const startTime = new Date('2024-02-01').getTime()
+  const endTime = new Date('2024-10-14').getTime()
+
   const found = await findHistoricalData('BTCEUR-8h')
-  console.log(found)
+  console.log('found:', found)
 
   if (found) {
     const deleted = await deleteHistoricalData('BTCEUR-8h')
-    console.log(deleted)
+    console.log('deleted:', deleted)
   }
 
   const downloaded = await downloadHistoricalData('BTCEUR', {
     interval: '8h',
-    startDate: '2024-01-01',
-    endDate: '2024-10-15'
+    startDate: startDate,
+    endDate: endDate
   })
-  console.log(downloaded)
+  console.log('downloaded:', downloaded)
 
   const allNames = await findHistoricalDataNames()
-  console.log(allNames)
+  console.log('allNames:', allNames)
 
   const scan = await scanStrategies()
-  console.log(scan)
+  console.log('scan:', scan)
 
   const strategyResult = await runStrategy({
     strategyName: 'demo',
@@ -41,12 +49,12 @@ async function main() {
       highSMA: 50
     },
     startingAmount: 1000,
-    startTime: new Date('2024-01-14').getTime(),
-    endTime: new Date('2024-10-14').getTime()
+    startTime: startTime,
+    endTime: endTime
   })
 
   const parsed = await parseRunResultsStats(strategyResult)
-  console.log(parsed?.totals[0], parsed?.totals[1]) // just to show somethings (probably, you need to look parsed or strategyResult)
+  console.log('parsed:', parsed?.totals[0], parsed?.totals[1]) // just to show somethings (probably, you need to look parsed or strategyResult)
 }
 
 main()
