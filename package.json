@@ -28,7 +28,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@backtest/framework": "^1.1.0",
+    "@backtest/framework": "^1.1.4",
     "dayjs": "^1.11.13",
     "technicalindicators": "^3.1.0"
   },
