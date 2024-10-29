@@ -1,5 +1,5 @@
 {
-  "name": "@backtest/quick-start",
+  "name": "quick-start",
   "version": "1.1.0",
   "description": "This project is a quick start guide for Backtest, a library for trading developers",
   "main": "dist/main.js",
