@@ -1,10 +1,10 @@
 {
-  "name": "@backtestjs/quick-start",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@backtest/quick-start",
+  "version": "1.1.0",
+  "description": "This project is a quick start guide for Backtest, a library for trading developers",
   "main": "dist/main.js",
   "keywords": [
-    "backtestjs",
+    "backtest",
     "boilerplate",
     "quick-start",
     "project-template"
@@ -20,7 +20,7 @@
     "postinstall": "npm run build"
   },
   "prisma": {
-    "schema": "./node_modules/@backtestjs/framework/prisma/schema.prisma"
+    "schema": "./node_modules/@backtest/framework/prisma/schema.prisma"
   },
   "files": [
     "dist"
@@ -28,6 +28,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "@backtest/framework": "^1.1.0",
     "dayjs": "^1.11.13",
     "technicalindicators": "^3.1.0"
   },

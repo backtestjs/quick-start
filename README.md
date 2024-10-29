@@ -4,23 +4,23 @@
 
 # Backtest JS: Quick Start
 
-Enhance your trading strategies with [BacktestJS](https://github.com/backtestjs/framework), the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+Enhance your trading strategies with [Backtest](https://github.com/backtestjs/framework), the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
 
 ## Why this
 
-This repository has been created to provide a starting point for those who want to start using BacktestJS. This will allow you to explore the capabilities of BacktestJS and start developing your trading strategies quickly.
+This repository has been created to provide a starting point for those who want to start using Backtest. This will allow you to explore the capabilities of Backtest and start developing your trading strategies quickly.
 
 ## Instructions
 
 Clone this repo and start writing your strategies immediately:
 
 ```bash
-  git clone git@github.com:backtestjs/quick-start.git backtestjs-test
-  cd backtestjs-test
+  git clone git@github.com:backtestjs/quick-start.git backtest-test
+  cd backtest-test
   npm install
 ```
 
-If you intend to use this repository as a starting point for your project rather than just to explore BacktestJS, it's recommended to disconnect from the current repository to work independently with git. If needed, you can replace it with your own repository.
+If you intend to use this repository as a starting point for your project rather than just to explore Backtest, it's recommended to disconnect from the current repository to work independently with git. If needed, you can replace it with your own repository.
 
 Follow these steps to achieve this:
 
@@ -63,7 +63,7 @@ The project is organized as follows:
 
 - `.env`: This file contains environment variables. Please, refer to below section about the `.env` file.
 
-- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use BacktestJS. Please, refer to [BacktestJS documentation](https://backtestjs.github.io/framework/) for more information.
+- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use Backtest. Please, refer to [Backtest Documentation](https://backtestjs.github.io/framework/) for more information.
 
 - `strategies`: This directory contains the source code for the strategies. Each strategy is a separate file that implements the logic for a specific trading strategy.
 
@@ -73,10 +73,10 @@ The project is organized as follows:
 
 The `.env` file is used to store environment variables. This file is not committed to the repository, so you can use it to store sensitive information.
 
-The `DATABASE_URL` variable **must be** inserted with the path to the target file. By default, SQLite is used, so it's not necessary to have an external database. For example, an absolute path like `DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db` is valid.
+The `DATABASE_URL` variable **must be** inserted with the path to the target file. By default, SQLite is used, so it's not necessary to have an external database. For example, an absolute path like `DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtest.db` is valid.
 
 ```env
-DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtestjs.db
+DATABASE_URL=file:/Users/backtesjs/quick-start/db/backtest.db
 FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
 ```
 
@@ -84,11 +84,11 @@ FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
 
 `npm install` install all dependencies
 
-`npm link @backtestjs/framework` link the local version of the framework package (useful for development)
+`npm link @backtest/framework` link the local version of the framework package (useful for development)
 
 `npm install --include=dev prisma` install prisma cli (useful for manage SQLite database)
 
-`npm install @backtestjs/framework` install the latest version of the framework package (useful for production)
+`npm install @backtest/framework` install the latest version of the framework package (useful for production)
 
 `npx prisma validate` validate your Prisma schema
 
