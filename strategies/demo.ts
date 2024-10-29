@@ -7,23 +7,31 @@ export const properties = {
 }
 
 export async function runStrategy(bth: BTH) {
-  const lowSMACandles = await bth.getCandles('close', 0, 3)
-  const highSMACandles = await bth.getCandles('close', 0, 45)
+  if (bth.tradingCandle) {
+    const lowSMAInput = bth.params.lowSMA
+    const highSMAInput = bth.params.highSMA
 
-  // Calculate low and high SMA
-  const lowSMAs = indicator.SMA.calculate({ period: 3, values: lowSMACandles })
-  const highSMAs = indicator.SMA.calculate({ period: 45, values: highSMACandles })
+    // Get last candles
+    const lowSMACandles = await bth.getCandles('close', 0, lowSMAInput)
+    const highSMACandles = await bth.getCandles('close', 0, highSMAInput)
 
-  const lowSMA = lowSMAs[lowSMAs.length - 1]
-  const highSMA = highSMAs[highSMAs.length - 1]
+    // Calculate low and high SMA
+    const lowSMAs = indicator.SMA.calculate({ period: lowSMAInput, values: lowSMACandles })
+    const highSMAs = indicator.SMA.calculate({ period: highSMAInput, values: highSMACandles })
 
-  // Buy if lowSMA crosses over the highSMA
-  if (lowSMA > highSMA) {
-    await bth.buy()
-  }
+    const lowSMA = lowSMAs[lowSMAs.length - 1]
+    const highSMA = highSMAs[highSMAs.length - 1]
 
-  // Sell if lowSMA crosses under the highSMA
-  else {
-    await bth.sell()
+    // Buy if lowSMA crosses over the highSMA
+    if (lowSMA > highSMA) {
+      await bth.buy()
+    }
+
+    // Sell if lowSMA crosses under the highSMA
+    else {
+      await bth.sell()
+    }
+  } else {
+    // Here is your code to analyze the potential support candles, if they have been defined (supportHistoricalData)
   }
 }
