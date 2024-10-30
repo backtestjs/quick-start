@@ -63,7 +63,7 @@ The project is organized as follows:
 
 - `.env`: This file contains environment variables. Please, refer to below section about the `.env` file.
 
-- `main.ts`: This is the entry point of the project. Here you can found an exaample of how to use Backtest. Please, refer to [Backtest Documentation](https://backtestjs.github.io/framework/) for more information.
+- `main.ts`: This is the entry point of the project. Here you can found an example of how to use Backtest. Please, refer to [Backtest Documentation](https://backtestjs.github.io/framework/) for more information.
 
 - `strategies`: This directory contains the source code for the strategies. Each strategy is a separate file that implements the logic for a specific trading strategy.
 
