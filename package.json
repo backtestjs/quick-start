@@ -4,6 +4,7 @@
   "description": "This project is a quick start guide for Backtest, a library for trading developers",
   "main": "dist/main.js",
   "keywords": [
+    "backtesting",
     "backtest",
     "boilerplate",
     "quick-start",
