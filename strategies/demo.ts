@@ -32,6 +32,7 @@ export async function runStrategy(bth: BTH) {
       await bth.sell()
     }
   } else {
-    // Here is your code to analyze the potential support candles, if they have been defined (supportHistoricalData)
+    // Here is your code to analyze the potential support candles,
+    // if they have been defined (aka supportHistoricalData)
   }
 }
