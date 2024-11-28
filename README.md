@@ -4,7 +4,7 @@
 
 # Backtest JS: Quick Start
 
-Enhance your trading strategies with [Backtest](https://github.com/backtestjs/framework), the leading CLI tool crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
+Enhance your trading strategies with [Backtest](https://github.com/backtestjs/framework), a comprehensive and user-friendly framework crafted for trading developers. Leverage the power of TypeScript (or JavaScript) to backtest your strategies with unmatched precision, efficiency, and flexibility.
 
 ## Why this
 
