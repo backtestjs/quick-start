@@ -95,3 +95,27 @@ FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
 `npx prisma generate` generate Prisma Client (required if you change your Prisma schema or your database url)
 
 `npx prisma db push` push your Prisma schema to your database
+
+## Support the project
+
+This open-source project grows thanks to everyone's support. If you appreciate this work and want to keep it active, consider making a small donation. Even a small contribution, like the cost of a coffee ☕, can make a difference!
+
+### Why Donate?
+
+- You support the continuous development and maintenance of the project.
+- You contribute to creating new features and improvements.
+
+### How to Donate?
+
+You can make a donation through:
+
+**Lighjtning Network**
+roaringcent59@walletofsatoshi.com
+
+**Bitcoin address**
+bc1qtly7cqy8zxzs79ksmdsfnz7hjyhhd3t2f9mvvj
+
+**Ethereum address**
+0xa4A79Be4e7AE537Cb9ee65DB92E6368425b2d63D
+
+Thank you for your support! 💙
