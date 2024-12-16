@@ -96,11 +96,11 @@ FRAMEWORK_LOG_LEVEL=ERROR # trace, debug, info, error (default)
 
 `npx prisma db push` push your Prisma schema to your database
 
-## Support the project
+## Support the project
 
 This open-source project grows thanks to everyone's support. If you appreciate this work and want to keep it active, consider making a small donation. Even a small contribution, like the cost of a coffee ☕, can make a difference!
 
-### Why Donate?
+### Why Donate?
 
 - You support the continuous development and maintenance of the project.
 - You contribute to creating new features and improvements.
@@ -113,9 +113,9 @@ You can make a donation through:
 roaringcent59@walletofsatoshi.com
 
 **Bitcoin address**
-bc1qtly7cqy8zxzs79ksmdsfnz7hjyhhd3t2f9mvvj
+[bc1qtly7cqy8zxzs79ksmdsfnz7hjyhhd3t2f9mvvj](https://www.blockchain.com/explorer/addresses/btc/bc1qtly7cqy8zxzs79ksmdsfnz7hjyhhd3t2f9mvvj)
 
 **Ethereum address**
-0xa4A79Be4e7AE537Cb9ee65DB92E6368425b2d63D
+[0xa4A79Be4e7AE537Cb9ee65DB92E6368425b2d63D](https://etherscan.io/address/0xa4A79Be4e7AE537Cb9ee65DB92E6368425b2d63D)
 
-Thank you for your support! 💙
+Thank you for your support! ❤️
