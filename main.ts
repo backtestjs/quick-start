@@ -41,12 +41,19 @@ async function main() {
   const scan = await scanStrategies()
   console.log('scan:', scan)
 
+  // The `params` can be single values or an array of values.
+  // If they are arrays, the `backtestjs/framework` will calculate all the necessary permutations to execute.
+  // In `strategyResults`, there will be a single result in the case of point values
+  // or all the permutations with the relative data.
+
+  // More info here: https://github.com/backtestjs/framework
+
   const strategyResult = await runStrategy({
     strategyName: 'demo',
     historicalData: ['BTCEUR-8h'],
     params: {
-      lowSMA: 10,
-      highSMA: 50
+      lowSMA: [10, 20],
+      highSMA: [30, 40, 50]
     },
     startingAmount: 1000,
     startTime: startTime,
